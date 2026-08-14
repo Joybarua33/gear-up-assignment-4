@@ -1,12 +1,12 @@
-import { prisma } from "../lib/prisma";
+import { prisma } from "../../lib/prisma";
 import bcrypt from "bcryptjs";
-import config from "../config";
+import config from "../../config";
 import { RegisterUserPayload } from "./user.interface";
 
 
 const registerUserIntoDB = async (payload : RegisterUserPayload) =>{
     const {name, email, password} = payload;
-    
+
     const isUserExist = await prisma.user.findUnique({
         where : {email}
     });

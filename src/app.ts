@@ -6,7 +6,8 @@ import httpStatus from "http-status";
 import { prisma } from "./lib/prisma";
 import bcrypt from "bcryptjs";
 import { userInfo } from "node:os";
-import { userRoutes } from "./modules/user.route";
+import { userRoutes } from "./modules/user/user.route";
+
 const app : Application = express();
 
 app.use(cors({
