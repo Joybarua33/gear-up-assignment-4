@@ -8,3 +8,10 @@ enum Role {
     USER
     ADMIN
 }
+
+enum OrderStatus {
+    PENDING
+    CONFIRMED
+    RETURNED
+    CANCELLED
+}

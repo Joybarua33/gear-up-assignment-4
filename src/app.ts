@@ -8,6 +8,8 @@ import bcrypt from "bcryptjs";
 import { userInfo } from "node:os";
 import { userRoutes } from "./modules/user/user.route";
 import { authRoutes } from "./modules/auth/auth.route";
+import { gearRoutes } from "./modules/gear/gear.route";
+import { categoryRoute } from "./modules/category/category.route";
 
 const app : Application = express();
 
@@ -25,5 +27,7 @@ app.get("/", (req : Request, res : Response) =>{
 
 app.use("/api/users", userRoutes);
 app.use("/api/auth", authRoutes);
+app.use("/api", categoryRoute);
+app.use("/api", gearRoutes);
 
 export default app;

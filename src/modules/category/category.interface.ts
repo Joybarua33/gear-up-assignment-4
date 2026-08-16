@@ -1,0 +1,5 @@
+export interface ICategories {
+    name : string,
+    slug : string,
+    icon : string
+}
