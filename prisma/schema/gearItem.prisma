@@ -5,8 +5,9 @@ model GearItem {
     brand String
     pricePerDay Decimal @db.Decimal(10, 2)
     isAvailable Boolean @default(true)
+    image String[]
 
-    providerId String @unique
+    providerId String 
     provider User @relation(fields: [providerId], references: [id], onDelete: Cascade)
 
     categoryId String

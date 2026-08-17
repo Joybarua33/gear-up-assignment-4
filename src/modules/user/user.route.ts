@@ -7,6 +7,6 @@ const router = Router();
 
 
 router.post("/register", userController.registerUser);
-router.get("/me", auth(Role.ADMIN, Role.USER, Role.CUSTOMER), userController.getMyProfile);
+router.get("/me", auth(Role.ADMIN, Role.PROVIDER, Role.CUSTOMER), userController.getMyProfile);
 
 export const userRoutes = router;
